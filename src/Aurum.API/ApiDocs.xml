@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aurum.API</name>
+    </assembly>
+    <members>
+        <member name="M:Aurum.API.Controllers.ProductsController.CreateProduct(Aurum.Application.Commands.CreateProductCommand)">
+            <summary>
+            Cria novo produto
+            </summary>
+            <param name="command"></param>
+            <returns>Id do produto criado</returns>
+            <response code="201">Produto criado</response>
+        </member>
+    </members>
+</doc>

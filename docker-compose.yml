@@ -1,0 +1,31 @@
+networks:
+  aurum.network:
+
+services:
+  aurum.database:
+    container_name: app-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 8002:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=database#password@12345
+    networks:
+      - aurum.network
+
+  aurum.api:
+    image: ${DOCKER_REGISTRY-}aurumapi
+    build:
+      context: .
+      dockerfile: src/Aurum.API/Dockerfile
+    ports:
+      - 8001:8081
+    depends_on:
+      - aurum.database
+    environment:
+      - DB_HOST=aurum.database
+      - DB_NAME=AURUM_DB
+      - DB_SA_PASSWORD=database#password@12345
+      - ConnectionStrings__DefaultConnection=Server=aurum.database;Database=AURUM_DB;User Id=sa;Password=database#password@12345;TrustServerCertificate=True 
+    networks:
+      - aurum.network

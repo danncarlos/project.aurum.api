@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Aurum.Domain\Aurum.Domain.csproj" />
+    <ProjectReference Include="..\Aurum.Infra\Aurum.Infra.csproj" />
+  </ItemGroup>
+
 </Project>
