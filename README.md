@@ -20,4 +20,4 @@ Somente esses passos já vão garantir o backend, caso nãos seja possivel rodar
 
 Construção do Banco e migrações pendentes serão executadas no primeiro startup da aplicação.
 
-
+Baixe o FrontEnd aqui:> https://github.com/danncarlos/project.aurum.web
