@@ -18,6 +18,6 @@ CRUD utilizando .net 8
 
 Somente esses passos já vão garantir o backend, caso nãos seja possivel rodar com docker, deve ajustar a ConnectionStrings no `appsettings.json` apontando para um banco local valido.
 
-Construção do Banco e migrações pendentes serão executadas no primeiro startup da aplicação.
+Migrations (construção de banco e seed) serão aplicadas no startup da aplicação.
 
-Baixe o FrontEnd aqui:> https://github.com/danncarlos/project.aurum.web
+FrontEnd:> https://github.com/danncarlos/project.aurum.web
